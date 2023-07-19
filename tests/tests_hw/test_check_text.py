@@ -11,7 +11,6 @@ def test_page_elements_hw(browser):
 
 
     """Задание №2"""
-    #
     elements_page.btn_elements.click()
     time.sleep(3)
     assert elements_page.text_place.get_text() == "Please select an item from left to start practice."
