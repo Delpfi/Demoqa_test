@@ -1,10 +1,8 @@
 from selenium import webdriver
 
 from pages.elements_page import ElementsPage
-from components.components import WebElement
 
 
-#driver = webdriver.Chrome()
 def test_page_elements(browser):
     elements_page = ElementsPage(browser)
     elements_page.visit()
@@ -14,7 +12,6 @@ def test_page_elements(browser):
     assert elements_page.btn_sidebar_first_textbox.exist()
 
 
-#page_elements(browser=driver)
 
 
 
