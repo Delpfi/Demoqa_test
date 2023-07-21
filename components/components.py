@@ -39,3 +39,10 @@ class WebElement:
         if len(self.find_elements()) == count:
             return True
         return False
+
+    def get_attribute_value(self):
+        return self.find_element().get_attribute("value")
+
+    def drag_and_drop_by_offset(self,element,x_coords,y_coords):
+        action = ActionChains(self.driver)
+        action.drag_and_drop_by_offset(element,x_coords,y_coords).perform()
