@@ -18,3 +18,5 @@ class ElementsPage(BasePage):
 
         self.btn_sidebar_two_textbox_check_box = WebElement(driver,"div:nth-child(1) > div > ul > #item-1 > span")
         self.count_element = WebElement(driver,"div:nth-child(1) > div > ul > li")
+
+        self.element_nav = WebElement(driver,"#app > div > div > div.row > div:nth-child(1) > nav > button")

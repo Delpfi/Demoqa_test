@@ -46,3 +46,16 @@ class WebElement:
     def drag_and_drop_by_offset(self,element,x_coords,y_coords):
         action = ActionChains(self.driver)
         action.drag_and_drop_by_offset(element,x_coords,y_coords).perform()
+
+
+    def send_keys(self,text):
+        self.find_element().send_keys(text)
+
+    def click_force(self):
+        self.driver.execute_script("arguments[0].click();",self.find_element())
+
+    def clear(self):
+        self.find_element().send_keys(Keys.CONTROL + "a")
+        self.find_element().send_keys(Keys.DELETE)
+
+
