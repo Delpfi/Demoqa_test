@@ -53,6 +53,7 @@ def test_webtables(browser):
     obj_web_tables.btn_submit.click() #сохраняем новое имя
     assert old_first_name != new_first_name #проверка что именна разные
     obj_web_tables.search.send_keys("IIvan@mail.ru") #найти сотрудника по email
+    time.sleep(3)
     obj_web_tables.btn_delete.click()# - удалить найденную строку
     time.sleep(3)
 
