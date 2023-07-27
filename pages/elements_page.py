@@ -20,3 +20,5 @@ class ElementsPage(BasePage):
         self.count_element = WebElement(driver,"div:nth-child(1) > div > ul > li")
 
         self.element_nav = WebElement(driver,"#app > div > div > div.row > div:nth-child(1) > nav > button")
+
+        self.element_list_check_css = WebElement(driver,"div.row > div:nth-child(1)")
