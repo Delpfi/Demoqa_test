@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session") # влияет на поведение функции
 def browser():
     driver = webdriver.Chrome()
     #driver.maximize_window()

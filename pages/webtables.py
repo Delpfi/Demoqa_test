@@ -25,3 +25,16 @@ class WebTables(BasePage):
 
         """Поиск строки"""
         self.search = WebElement(driver,"#searchBox")
+        self.no_data = WebElement(driver, "div.rt-noData")
+
+        """выпадающий список со строчками"""
+        self.select_wrap = WebElement(driver, "span.select-wrap.-pageSizeOptions > select")
+        #self.select_wrap_value = WebElement(driver, "select > option:nth-child(1)")
+
+        self.btn_next = WebElement(driver,"div.-next > button")
+        self.btn_previous = WebElement(driver,"div.-previous > button")
+        """Кол-во страниц всего"""
+        self.page_info = WebElement(driver,"span.-pageInfo > span")
+
+        """Текущий номер страницы"""
+        self.page_number = WebElement(driver,"input[type=number]")

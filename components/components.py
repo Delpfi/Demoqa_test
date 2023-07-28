@@ -43,6 +43,8 @@ class WebElement:
 
     def get_attribute_value(self):
         return self.find_element().get_attribute("value")
+    def get_attribute_class(self):
+        return self.find_element().get_attribute("class")
 
     def get_dom_attribute(self, name):
         value = self.find_element().get_dom_attribute(name)
