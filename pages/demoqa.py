@@ -10,6 +10,7 @@ class DemoQa(BasePage):
         self.icon = WebElement(driver, "#app > header > a")
         self.btn_elements = WebElement(driver, "#app > div > div > div.home-body > div > div:nth-child(1)")
 
+        self.h_5_element = WebElement(driver,"div > div.card-body > h5")
     # def exist_icon(self):
     #     try:
     #         #self.find_element('div.login_logo')

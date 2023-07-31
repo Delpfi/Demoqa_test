@@ -46,6 +46,6 @@ def test_timer_alert(browser):
     alert_timer.visit()
     assert alert_timer.btn_timer_alert.visible()
     alert_timer.btn_timer_alert.click()
-    time.sleep(6)
+    time.sleep(6) # проверить что в теч 5 сек , появилось окно alert, (с помощь цикла)
     assert alert_timer.alert().text == "This alert appeared after 5 seconds"
     alert_timer.alert().accept()

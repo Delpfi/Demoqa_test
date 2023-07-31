@@ -1,5 +1,8 @@
 import logging
 import time
+
+import requests
+
 from components.components import WebElement
 from selenium.webdriver.common.by import By
 class BasePage:
@@ -40,3 +43,7 @@ class BasePage:
             logging.log(1, ex)
             return False
 
+
+    def code_stats(self):
+        resp = requests.get(self.base_url)
+        return resp.status_code #== 200

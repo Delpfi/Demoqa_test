@@ -1,7 +1,7 @@
 import random
 import time
 
-from selenium.webdriver import Keys
+from selenium.webdriver import ActionChains, Keys
 
 from pages.webtables import WebTables
 from selenium import webdriver
@@ -72,11 +72,15 @@ def test_webtable_text(browser):
     assert not obj_web_tables_1.form_list.find_elements()
 
 def test_next_previous(browser):
-    browser.maximize_window()
+    #browser.maximize_window()
+    action = ActionChains(browser)
     webtable_next_previous = WebTables(browser)
     webtable_next_previous.visit()
+    # find_elemnt = webtable_next_previous.element_alerts.find_element()
+    # action.move_to_element(find_elemnt).perform()
+    time.sleep(5)
     assert webtable_next_previous.get_url() == "https://demoqa.com/webtables" #проверка, что открыта страница webtable
-    webtable_next_previous.select_wrap.click()
+    webtable_next_previous.select_wrap.click_force()
     webtable_next_previous.select_wrap.send_keys("5 rows")
     webtable_next_previous.select_wrap.send_keys(Keys.ENTER)
     time.sleep(3)

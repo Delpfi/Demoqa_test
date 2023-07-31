@@ -94,3 +94,12 @@ class WebElement:
 
     def check_css(self, style, value = ""):
         return self.find_element().value_of_css_property(style) == value
+
+    def list_sort_elements(self):
+        list_elements = self.find_elements()
+        list_elem = []
+        for item in list_elements:
+            if item.text == ' ' or item.text =='       ':
+                continue
+            list_elem.append(item.text.splitlines())
+        return list_elem
