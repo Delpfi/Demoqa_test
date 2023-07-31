@@ -38,3 +38,11 @@ class WebTables(BasePage):
 
         """Текущий номер страницы"""
         self.page_number = WebElement(driver,"input[type=number]")
+
+        self.element_alerts = WebElement(driver,"div:nth-child(1) > div > div > div:nth-child(3) > span > div")
+        """заголовок столбца First Name - имя, и на столбец можно нажать"""
+        self.head_first_name = WebElement(driver,"div.rt-thead.-header > div > div:nth-child(1)")
+        self.list_first_name = WebElement(driver, "div.rt-tbody > div > div > div:nth-child(1)")
+
+
+

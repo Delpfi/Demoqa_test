@@ -8,3 +8,15 @@ class ModalDialogs(BasePage):
 
         self.count_elements_alerts = WebElement(driver,'div > div:nth-child(3) > div > ul > li')
         self.icon = WebElement(driver, "#app > header > a")
+
+        """Элементы small-modal"""
+        self.btn_small_modal = WebElement(driver, "#showSmallModal")
+        self.body_small_modal = WebElement(driver,"div.modal-body")
+        self.title_small_modal = WebElement(driver,"#example-modal-sizes-title-sm")
+        self.btn_close_small_modal = WebElement(driver,"#closeSmallModal")
+        """Элементы large-modal"""
+        self.btn_large_modal = WebElement(driver,"#showLargeModal")
+        self.title_large_modal = WebElement(driver,"#example-modal-sizes-title-lg")
+        self.body_large_modal = WebElement(driver, "div.modal-body > p")
+        self.btn_close_large_modal= WebElement(driver,"#closeLargeModal")
+        self.list_btn  =  WebElement(driver, "#modalWrapper > div > button")
