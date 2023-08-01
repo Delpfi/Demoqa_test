@@ -16,7 +16,7 @@ def test_inputs(browser):
     time.sleep(2)
     inputs.fild.clear()
     """Key_ исходная строка """
-    key1 = "-12e-e32"
+    key1 = "-12E-e32"
     list_key = ["E","e"]
     list_num = ["0","1","2","3","4","5","6","7","8","9"]
     list_key_ch = ["-"]
@@ -35,10 +35,14 @@ def test_inputs(browser):
         elif i in list_key_ch:
             list_result.append(i)
 
-    """Проверить нужно исходную строчку и отфильтрованную """
+    """Проверить нужно исходную строчку и отфильтрованную """ #примерно как то так
+    if ("".join(list_result) == key1):
+        assert "".join(list_result) == key1
+    else:
+        assert not "".join(list_result) == key1
 
 
-    print(list_result)
+
     inputs.fild.send_keys(key1)
     inputs.fild.send_keys(Keys.ENTER)
     #print(inputs.fild_1.find_element())
