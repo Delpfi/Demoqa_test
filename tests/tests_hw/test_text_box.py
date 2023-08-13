@@ -7,6 +7,7 @@ def test_text_box(browser):
     elementes_box.visit()
     full_name = "Vadim"
     elementes_box.user_name.send_keys(full_name)
+    print(elementes_box.user_name.get_text())
     time.sleep(3)
     current_address = "Блюхеро 7"
     elementes_box.current_address.send_keys(current_address)

@@ -1,8 +1,10 @@
 import random
 import time
 
-from pages.widgets_slider import Widgets_Silder
+from selenium.webdriver import Keys
 
+from pages.widgets_slider import Widgets_Silder
+from conftest import browser
 
 
 def test_value(browser):
@@ -17,6 +19,21 @@ def test_value(browser):
     time.sleep(3)
     assert value_silder_old != value_silder_new
 
+
+def test_slider(browser):
+    silder = Widgets_Silder(browser)
+    silder.visit()
+    # assert silder.input_silder.visible()
+    # assert  silder.value_slider.get_attribute_value() == "25"
+    # input = silder.input_silder.find_element()
+    # silder.input_silder.drag_and_drop_by_offset(input,1,0)
+    # assert silder.value_slider.get_attribute_value() == "50"
+    # time.sleep(5)
+
+    while not silder.value_slider.get_attribute_value() == "50":
+        silder.input_silder.send_keys(Keys.ARROW_RIGHT)
+
+    time.sleep(5)
 
 
 
